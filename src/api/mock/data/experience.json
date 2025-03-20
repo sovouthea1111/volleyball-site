@@ -1,0 +1,29 @@
+[
+  {
+    "class" : "timeline-start md:text-end",
+    "year": "May 2022 - July 2022",
+    "position": "Internship Software Development at CloutNet Co.,Ltd",
+    "description": "Had applied knowledge from school to real projects. Had joined as supporting many projects including trading platforms, ERP System and Shop Ecommerce."
+  },
+
+  {
+    "class" : "timeline-end md:text-start",
+    "year": "July  2022 - April  2023",
+    "position": "Junior Web Developer at CloutNet  Co.,Ltd",
+    "description": "Has learned and upgraded Coding skills by developing websites based on assigned tasks and getting led by line manager. Experienced in developing types of projects including:. * CMS: develop and maintain Government  system Website. Experienced in both working independently with guidance from project manager and in the team."
+  },
+
+  {
+    "class" : "timeline-start md:text-end",
+    "year": "May 2023 - July 2024",
+    "position": "Probation Web Development at ACM Indochina",
+    "description": "Has Learned new technical skills such as vue js and nuxt js. Experienced in developing many website. Experienced in both working independently with guidance from project manager and in the team"
+  },
+
+  {
+    "class" : "timeline-end md:text-start",
+    "year": " july 2024 until now",
+    "position": "Junior Web Development at ACM Indochina",
+    "description": "Has completed 3 websites and 2 master pages. Has Learned Java Spring and create CRUD rest api"
+  }
+]

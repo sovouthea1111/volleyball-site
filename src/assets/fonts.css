@@ -1,0 +1,19 @@
+/* src/assets/fonts.css */
+@font-face {
+    font-family: 'Oswald';
+    src: url('@/assets/fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('@/assets/fonts/Oswald-Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+html, body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
