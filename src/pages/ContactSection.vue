@@ -2,11 +2,24 @@
 import {ref} from "vue";
 import axios from "axios";
 import {Icon} from "@iconify/vue";
+import { Checkbox } from 'vue-recaptcha';
 
 const loading = ref(false);
 const errorMessage = ref({});
 const successMessage = ref(null);
+const recaptchaVerified = ref(false);
+const recaptchaRef = ref(null);
 
+const onVerify = (response) => {
+  if (response) {
+    recaptchaVerified.value = true;
+    errorMessage.value.recaptcha = '';
+  }
+};
+
+const onExpired = () => {
+  recaptchaVerified.value = false;
+};
 
 const initialFormData = {
   firstname: '',
@@ -19,13 +32,21 @@ const initialFormData = {
 const formData = ref({...initialFormData});
 
 const submitForm = async () => {
+  if (!recaptchaVerified.value) {
+    errorMessage.value = { ...errorMessage.value, recaptcha: 'Please complete the reCAPTCHA' };
+    return;
+  }
   loading.value = true;
   const url = 'https://api-node-my-vouthea.vercel.app/api/send-mail';
   try {
     const response = await axios.post(url, formData.value);
     if (response) {
-      errorMessage.value = {...initialFormData};
+      errorMessage.value = {};
       formData.value = {...initialFormData};
+      recaptchaVerified.value = false;
+      if (recaptchaRef.value) {
+        recaptchaRef.value.reset();
+      }
       successMessage.value = response.data;
       setTimeout(() => {
         successMessage.value = null;
@@ -109,6 +130,16 @@ const submitForm = async () => {
           <span class="text-white">{{ successMessage }}</span>
         </div>
       </div>
+      
+      <Checkbox
+        ref="recaptchaRef"
+        @verify="onVerify"
+        @expired="onExpired"
+      />
+      <small v-if="errorMessage.recaptcha" class="text-red-800">
+        {{ errorMessage.recaptcha }}
+      </small>
+
       <button type="submit" class="btn btn-sm w-[55%] max-sm:w-full bg-secondary flex items-center justify-center"
               :disabled="loading">
         <Icon v-if="loading" icon="eos-icons:loading" class="w-5 h-5 animate-spin mr-2"/>
