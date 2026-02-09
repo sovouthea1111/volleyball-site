@@ -18,7 +18,7 @@
           <div
             class="bg-white rounded-full p-2 mr-4 flex flex-row items-center"
           >
-            <ApplicationLogo />
+            <ApplicationLogo class="h-8" />
             <h1 class="text-lg font-semibold">Angry Bird Volleyball</h1>
           </div>
           <ul class="flex justify-center space-x-6">
