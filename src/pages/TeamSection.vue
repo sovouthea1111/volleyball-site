@@ -2,13 +2,13 @@
 import { ref, computed } from 'vue';
 
 const filter = ref('All');
-const categories = ['All', 'Wing Spiker', 'Middle Blocker', 'Setter', 'Libero'];
+const categories = ['All', 'Outside Hitter', 'Opposite Hitter', 'Middle Blocker', 'Setter', 'Libero'];
 
 const players = ref([
-  { id: 1, name: 'Alex "The Hawk" Johnson', number: 7, position: 'Wing Spiker', height: '192cm', spike: '340cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=1' },
+  { id: 1, name: 'Alex "The Hawk" Johnson', number: 7, position: 'Outside Hitter', height: '192cm', spike: '340cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=1' },
   { id: 2, name: 'Marcus Chen', number: 12, position: 'Setter', height: '185cm', spike: '320cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=2' },
   { id: 3, name: 'David Miller', number: 5, position: 'Middle Blocker', height: '201cm', spike: '350cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=3' },
-  { id: 4, name: 'Sarah Connor', number: 10, position: 'Wing Spiker', height: '188cm', spike: '315cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=4' },
+  { id: 4, name: 'Sarah Connor', number: 10, position: 'Opposite Hitter', height: '188cm', spike: '315cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=4' },
   { id: 5, name: 'Tom "Wall" Baker', number: 3, position: 'Libero', height: '175cm', spike: '290cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=5' },
   { id: 6, name: 'Chris Evans', number: 18, position: 'Middle Blocker', height: '198cm', spike: '345cm', image: 'https://loremflickr.com/300/300/volleyball,player?random=6' },
 ]);
