@@ -29,16 +29,12 @@ const currentYear = ref(new Date().getFullYear());
           <h3 class="flex text-lg font-semibold justify-center text-white mb-2 font-oswald max-sm:text-center">Follow
             Me</h3>
           <div class="flex flex-row justify-center space-x-4">
-            <a href="https://github.com/sovouthea1111" target="_blank" class="hover:text-blue-400 transition-colors">
-              <Icon icon="brandico:github" class="text-2xl"/>
-              <span class="sr-only">GitHub</span>
-            </a>
             <a href="https://www.linkedin.com/in/sovouthea-hoeun-b13966263/" target="_blank"
                class="hover:text-blue-400 transition-colors">
               <Icon icon="akar-icons:linkedin-fill" class="text-2xl"/>
               <span class="sr-only">LinkedIn</span>
             </a>
-            <a href="" target="_blank"
+            <a href="https://www.facebook.com/share/1812xPMYok/?mibextid=wwXIfr" target="_blank"
                class="hover:text-blue-400 transition-colors">
               <Icon icon="ri:facebook-fill" class="text-2xl"/>
               <span class="sr-only">Facebook</span>
