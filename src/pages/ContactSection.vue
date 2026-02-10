@@ -62,7 +62,7 @@ const submitForm = async () => {
 
 <template>
   <div class="font-oswald flex flex-col gap-7 mb-10">
-    <h2 class="text-center font-oswald text-[30px] text-primary">Contact Us</h2>
+    <h2 class="text-center text-4xl text-primary font-bold">Contact Us</h2>
     <form
       @submit.prevent="submitForm"
       class="w-full flex flex-col justify-center items-center gap-4"

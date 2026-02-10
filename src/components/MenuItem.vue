@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineProps, ref, onMounted, watch, nextTick} from 'vue';
+import {ref, onMounted, watch, nextTick} from 'vue';
 import {useRoute} from 'vue-router';
 
 const props = defineProps({
@@ -19,6 +19,8 @@ const menuItems = [
   {id: "match", label: "Match"},
   {id: "team", label: "Team"},
   {id: "training", label: "Training"},
+  {id: "gallery", label: "Gallery"},
+  {id: "blog", label: "News"},
 ];
 
 const route = useRoute();
@@ -31,10 +33,9 @@ const scrollToSection = (id: string) => {
   if (section) {
     section.scrollIntoView({behavior: "smooth", block: "start"});
     window.history.pushState(null, "", `#${id}`);
-    // Update active section after a slight delay
     setTimeout(() => {
       updateActiveSection();
-    }, 500); // Adjust delay as needed
+    }, 500);
   }
 };
 
@@ -56,13 +57,11 @@ const updateActiveSection = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', updateActiveSection);
-  // Ensure the active section is updated on mount
   nextTick(() => {
     updateActiveSection();
   });
 });
 
-// Watch for route hash changes
 watch(() => route.hash, (newHash) => {
   const id = newHash.replace('#', '');
   if (id) {
@@ -80,11 +79,11 @@ watch(() => route.hash, (newHash) => {
               href="javascript:void(0);"
               @click="scrollToSection(routeItem.id)"
               :class="{
-                'text-secondary': isActive(routeItem.id),
+                'text-primary': isActive(routeItem.id),
                 [props.textColor]: !isActive(routeItem.id),
                 'font-oswald': true,
                 'font-normal': true,
-                'hover:text-secondary': true
+                'hover:text-primary': true
               }"
           >
             {{ routeItem.label }}

@@ -6,6 +6,9 @@ import AboutUs from "@/pages/AboutUs.vue";
 import MatchSection from "@/pages/MatchSection.vue";
 import TeamSection from "@/pages/TeamSection.vue";
 import TrainingSection from "@/pages/TrainingSection.vue";
+import GallerySection from "@/pages/GallerySection.vue";
+import BlogSection from "@/pages/BlogSection.vue";
+import SponsorSection from "@/pages/SponsorSection.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const showScrollButton = ref(false);
@@ -27,13 +30,16 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <div class="relative">
+  <div class="relative" id="home">
     <HeaderSection/>
     <div class="px-6 flex flex-col gap-10 max-sm:gap-5">
       <AboutUs id="about-us"/>
       <MatchSection id="match"/>
       <TeamSection id="team"/>
       <TrainingSection id="training"/>
+      <GallerySection id="gallery"/>
+      <BlogSection id="blog"/>
+      <SponsorSection id="sponsors"/>
       <ContactSection id="contact-us"/>
     </div>
     <FooterSection/>

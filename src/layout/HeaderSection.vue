@@ -24,8 +24,8 @@
           <ul class="flex justify-center space-x-6">
             <MenuItem />
           </ul>
-          <button class="btn bg-primary text-white px-4 py-2 rounded-full ml-6">
-            <a href="/#contact-us"> Contact Us </a>
+          <button @click="scrollToContact" class="btn bg-primary text-white px-4 py-2 rounded-full ml-6">
+             Contact Us
           </button>
         </div>
       </div>
@@ -101,9 +101,10 @@
             s layout. The point of using Lorem.
           </p>
           <button
+            @click="scrollToContact"
             class="btn bg-primary text-white px-6 py-3 rounded-full"
           >
-            <a href="/#contact-us"> Contact Us </a>
+             Contact Us
           </button>
         </div>
       </div>
@@ -117,6 +118,13 @@ import MenuItem from "@/components/MenuItem.vue";
 import { ref } from "vue";
 
 const showBackground = ref(false);
+
+const scrollToContact = () => {
+  const contactSection = document.getElementById('contact-us');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 
 <style scoped>
