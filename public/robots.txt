@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://angry-bird-volleyball.vercel.app/sitemap.xml

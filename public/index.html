@@ -13,7 +13,6 @@
     <meta property="og:description" content="Get real-time updates on Angry Bird Volleyball Team matches, game schedules, tournament highlights, and championship rankings.">
     <meta property="og:image" content="https://angry-bird-volleyball.vercel.app/openGaph.jpg">
     <meta property="og:url" content="https://angry-bird-volleyball.vercel.app/">
-    <meta property="fb:app_id" content="https://www.facebook.com/sovothea.deli">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://angry-bird-volleyball.vercel.app">
@@ -21,6 +20,37 @@
     <meta name="twitter:title" content="Angry Bird Volleyball - Live Matches & Tournament Updates">
     <meta name="twitter:description" content="Follow the Angry Bird Volleyball Team for match schedules, live scores, tournament updates, and championship results.">
     <meta name="twitter:image" content="https://angry-bird-volleyball.vercel.app/openGaph.jpg">
+
+    <!-- Structured Data (JSON-LD) for Sports Team -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsTeam",
+      "name": "Angry Bird Volleyball Team",
+      "url": "https://angry-bird-volleyball.vercel.app/",
+      "logo": "https://angry-bird-volleyball.vercel.app/AngryBirdVolleyball.png",
+      "description": "Professional volleyball team competing in regional tournaments and championships.",
+      "coach": {
+        "@type": "Person",
+        "name": "Hoeun Sovouthea"
+      },
+      "athlete": [
+        {
+          "@type": "Person",
+          "name": "Ngam Sok Pich"
+        }
+      ],
+      "sport": "Volleyball",
+      "location": {
+        "@type": "Place",
+        "name": "Home Court",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "KH"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
 <div id="app"></div>
