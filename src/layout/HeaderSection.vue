@@ -18,13 +18,13 @@
           <div
             class="bg-white rounded-full p-2 mr-4 flex flex-row items-center"
           >
-            <ApplicationLogo class="h-8" />
+            <ApplicationLogo class="md:h-12 h-8" />
             <h1 class="text-lg font-semibold">Angry Bird Volleyball</h1>
           </div>
           <ul class="flex justify-center space-x-6">
             <MenuItem />
           </ul>
-          <button class="bg-yellow-500 text-white px-4 py-2 rounded-full ml-6">
+          <button class="btn bg-primary text-white px-4 py-2 rounded-full ml-6">
             <a href="/#contact-us"> Contact Us </a>
           </button>
         </div>
@@ -101,7 +101,7 @@
             s layout. The point of using Lorem.
           </p>
           <button
-            class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full"
+            class="btn bg-primary text-white px-6 py-3 rounded-full"
           >
             <a href="/#contact-us"> Contact Us </a>
           </button>

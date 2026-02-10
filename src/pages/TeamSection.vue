@@ -236,7 +236,7 @@ const filteredPlayers = computed(() => {
                    <span class="font-bold">{{ selectedPlayer.stats.serve }}%</span>
                  </div>
                  <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-                   <div class="h-full bg-yellow-500" :style="{ width: selectedPlayer.stats.serve + '%' }"></div>
+                   <div class="h-full bg-primary" :style="{ width: selectedPlayer.stats.serve + '%' }"></div>
                  </div>
                </div>
              </div>
