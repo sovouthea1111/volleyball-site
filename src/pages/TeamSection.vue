@@ -113,6 +113,13 @@ const filteredPlayers = computed(() => {
 <template>
   <div class="font-oswald flex flex-col gap-10 mb-10 text-accent">
     
+    <div class="text-center px-4">
+      <h2 class="text-4xl text-primary font-bold mb-4">Our Volleyball Team</h2>
+      <p class="text-lg text-gray-600 font-sans max-w-2xl mx-auto">
+        Meet the talented athletes and dedicated coaching staff behind our success.
+      </p>
+    </div>
+
     <div class="bg-gradient-to-br from-gray-900 to-primary text-white p-8 rounded-xl shadow-2xl mx-2 md:mx-0 flex flex-col md:flex-row items-center gap-8">
       <div class="w-40 h-40 rounded-full border-4 border-secondary overflow-hidden shrink-0 shadow-[0_0_20px_rgba(63,212,173,0.6)]">
         <img :src="coach.image" alt="Coach" class="w-full h-full object-cover">
@@ -125,6 +132,10 @@ const filteredPlayers = computed(() => {
           Experience: {{ coach.experience }}
         </div>
       </div>
+    </div>
+
+    <div class="px-4">
+      <h3 class="text-3xl font-bold mb-6 border-b-4 border-secondary inline-block pb-1">Spike Squad Roster</h3>
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 px-2">

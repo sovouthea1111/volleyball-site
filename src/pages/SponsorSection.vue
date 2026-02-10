@@ -23,6 +23,7 @@ const sponsors = ref([{ name: "Angry Bird Team", logo: logo }]);
         <img
           :src="sponsor.logo"
           :alt="sponsor.name"
+          loading="lazy"
           class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
         />
       </div>

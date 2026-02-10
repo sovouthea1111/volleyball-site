@@ -77,7 +77,7 @@ const closePost = () => {
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
       <div v-for="(post, index) in posts" :key="index" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer flex flex-col h-full" @click="openPost(post)">
         <div class="h-48 overflow-hidden shrink-0">
-          <img :src="post.image" :alt="post.title" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+          <img :src="post.image" :alt="post.title" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
         </div>
         <div class="p-6 flex flex-col flex-grow">
           <div class="text-sm text-secondary font-bold mb-2">{{ post.date }}</div>

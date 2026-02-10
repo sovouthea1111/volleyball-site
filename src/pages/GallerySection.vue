@@ -22,7 +22,7 @@ const images = ref([
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
       <div v-for="(img, index) in images" :key="index" class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-        <img :src="img" alt="Gallery Image" class="w-full h-64 object-cover">
+        <img :src="img" alt="Gallery Image" loading="lazy" class="w-full h-64 object-cover">
       </div>
     </div>
   </div>
